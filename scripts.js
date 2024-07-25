@@ -1,6 +1,4 @@
 
-
-
 $(document).ready(function(){
     var text = $('.maintext').text();
     var html = '';
@@ -9,6 +7,22 @@ $(document).ready(function(){
     }
     $('.maintext').html(html);
 
+    $('.maintext').css({
+        opacity: 0,
+        top: '50px'
+    }).animate({
+        opacity: 1,
+        top: '0'
+    }, 2000);
+
+    $('.carousel').css({
+        opacity: 0,
+       
+    }).animate({
+        opacity: 1,
+    }, 1000); // Adjust the duration as needed
+
+
     $('.letter').hover(
         function() {
             $(this).css('color', 'yellow');
@@ -16,4 +30,16 @@ $(document).ready(function(){
             $(this).css('color', 'white');
         }
     );
+
+    $('a').hover(
+        function() {
+            $(this).css('color', 'yellow');
+        }, function() {
+            $(this).css('color', 'white');
+        }
+    );
+    
+
+
+
 });
